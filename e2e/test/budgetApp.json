@@ -1,0 +1,95 @@
+{
+  "default_browser": "chrome",
+  
+  "home":{
+    "baseurl": "http://localhost:3000/",
+    "pagetitle": "Budgeting App - Educational React App",	
+	"budgetbtntext": "Budget",
+	"reportsbtntext": "Reports"
+  },
+
+  "type":{
+    "css":"css",
+    "id":"id",
+    "xpath":"xpath",
+    "class":"class",
+    "name":"name"
+  },
+  
+  "budgetpage": {
+	"budgetbtnXP": "//*[@id='root']/main/div/a[1]",
+	"reportsbtnXP": "//*[@id='root']/main/div/a[2]",
+	"budgeturlslug": "budget",
+	"firstcolumnXP": "//*[@id='root']/main/section/table/thead/tr/th[1]",
+	"secondcolumnXP": "//*[@id='root']/main/section/table/thead/tr/th[2]",
+	"thirdcolumnXP": "//*[@id='root']/main/section/table/thead/tr/th[3]",
+	"inflowtextXP": "(//div[@class='components-Balance-style-balanceTitle'])[1]",
+	"outflowtextXP": "(//div[@class='components-Balance-style-balanceTitle'])[2]",
+	"balancetextXP": "(//div[@class='components-Balance-style-balanceTitle'])[3]",
+	"firstcolumntext": "Category",
+	"secondcolumntext": "Description", 
+	"thirdcolumntext": "Amount",
+	"inflowtext": "Total Inflow",
+	"outflowtext": "Total Outflow",
+	"balancetext": "Working Balance",
+	"inflowamountXP": "//*[@id='root']/main/section/div/div/div[1]/div/div[1]",
+	"outflowamountXP": "//*[@id='root']/main/section/div/div/div[3]/div/div[1]",
+	"balanceamountXP": "//*[@id='root']/main/section/div/div/div[5]/div/div[1]",
+	"catdropdownboxCSS": "select[name=categoryId]",
+	"catdropdownoptionCSS": "select[name=categoryId] option:nth-child(2)",
+	"desctextboxCSS": "input[name=description]",
+	"valuetextboxCSS": "input[name=value]",
+	"addbutonCSS": "button[type=submit]",
+	"descritiontext": "Tuition",
+	"valueamount": "3000.00"
+  },
+  
+  "reportspage": {
+  	"inflowoutflowbtnXP": "//*[@id='root']/main/section/div[1]/a[1]",
+  	"spendingbycatbtnXP": "//*[@id='root']/main/section/div[1]/a[2]",
+	"inflowtextXP": "//*[@class='components-StackedChart-styles-xAxis']/g[1]/text[1]",
+	"outflowtextXP": "//*[@class='components-StackedChart-styles-xAxis']/g[1]/text[1]",
+	"inflowtextXP1": "//*[@id='root']/main/section/div[2]/svg/g/g[3]/g[1]/text[1]",
+	"outflowtextXP1": "//*[@id='root']/main/section/div[2]/svg/g/g[3]/g[2]/text[1]",
+	"firsttextXP":"//*[@id='root']/main/section/div[2]/ul/li[1]/span[1]",
+	"secondtextXP":"//*[@id='root']/main/section/div[2]/ul/li[2]/span[1]",
+	"thirdtextXP":"//*[@id='root']/main/section/div[2]/ul/li[3]/span[1]",
+	"fourthtextXP":"//*[@id='root']/main/section/div[2]/ul/li[4]/span[1]",
+	"inflowurlslug": "reports/inflow-outflow",
+	"spendingurlslug": "reports/spending",
+	"inflowoutflowbtntext": "Inflow vs Outflow",
+	"spendingbycatbtntext": "Spending by Category",
+	"inflowtext": "INFLOW",
+	"outflowtext": "OUTFLOW",
+	"firstelemtext": "Entertainment",
+	"secondelemtext": "Misc",
+	"thirdelemtext": "Travel",
+	"fourthelemtext": "Groceries"
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

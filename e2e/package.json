@@ -1,0 +1,23 @@
+{
+  "name": "ModusCreate",
+  "version": "0.0.1",
+  "description": "Common libraries that are used in every test framework.",
+  "dependencies": {
+    "async": "latest",
+    "chai": "latest",
+    "fs": "latest",
+    "mocha": "latest",
+    "path": "latest",
+    "requestify": "latest",
+    "selenium-standalone": "^6.12.0",
+    "selenium-webdriver": "^3.0.0-beta-2"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --recursive test/budgetApp/sanityTests --reporter mochawesome --reporter-options reportDir=report,reportFilename=sanityTests -t 9000000"
+  },
+  "author": "Raphael Edwards <oausocials2007@yahoo.com>",
+  "license": "Copyright :)",
+  "devDependencies": {
+    "mocha-simple-html-reporter": "^1.1.0"
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2018-01-17T23:51:33.487Z",
+    "end": "2018-01-17T23:52:56.555Z",
+    "duration": 83068,
+    "testsRegistered": 3,
+    "passPercent": 66.7,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "warning",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "3765ca75-8102-45b3-95c6-32f36f53e9d6",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "537c5d9b-235e-43c1-96df-7eae49dba255",
+        "title": "budgetApp Sanity Suite",
+        "fullFile": "c:\\budgeting-sample-app-webpack2\\e2e\\test\\budgetApp\\sanityTests.js",
+        "file": "\\test\\budgetApp\\sanityTests.js",
+        "beforeHooks": [
+          {
+            "title": "\"before each\" hook: ret",
+            "fullTitle": "budgetApp Sanity Suite \"before each\" hook: ret",
+            "timedOut": false,
+            "duration": 6796,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "framework.launchBrowser();\nlogs.gettestname(this.currentTest.title, this.currentTest.parent.title);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "70b2474f-49ad-4729-a3d3-b091c1b052a8",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [
+          {
+            "title": "\"after each\" hook: ret",
+            "fullTitle": "budgetApp Sanity Suite \"after each\" hook: ret",
+            "timedOut": false,
+            "duration": 1243,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "framework.closeBrowser();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "fb812101-f1ae-4ee3-a40a-605f166f4361",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "tests": [
+          {
+            "title": "Check_Landing_Pages",
+            "fullTitle": "budgetApp Sanity Suite Check_Landing_Pages",
+            "timedOut": false,
+            "duration": 33812,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "framework.openURL(data.home['baseurl'], data.home['pagetitle']);\nbudgetApp.togglePages(data['type'], data['home'], data['budgetpage'], data['reportspage']);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "2d0935b6-5241-41e8-a9d7-3db5836c3cfc",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "Add_Budget_Category",
+            "fullTitle": "budgetApp Sanity Suite Add_Budget_Category",
+            "timedOut": false,
+            "duration": 9276,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "framework.openURL(data.home['baseurl'], data.home['pagetitle']);\n\t\tbudgetApp.addCategory(data['type'], data['budgetpage']);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "a2cd857c-aae0-49b2-b50a-91efd9dc5cb5",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "Compute_Working_Balance",
+            "fullTitle": "budgetApp Sanity Suite Compute_Working_Balance",
+            "timedOut": false,
+            "duration": 9353,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "framework.openURL(data.home['baseurl'], data.home['pagetitle']);\n\t\tbudgetApp.addCategory(data['type'], data['budgetpage']);\nbudgetApp.calculateBalance(data['type'], data['budgetpage']);",
+            "err": {
+              "message": "AssertionError: 786.07 is not equal to -786.07: expected 786.07 to equal -786.07",
+              "estack": "AssertionError: 786.07 is not equal to -786.07: expected 786.07 to equal -786.07\n    at log.js:64:21\n    at node_modules\\async\\dist\\async.js:3686:9\n    at replenish (node_modules\\async\\dist\\async.js:882:17)\n    at node_modules\\async\\dist\\async.js:886:9\n    at eachOfLimit (node_modules\\async\\dist\\async.js:913:22)\n    at node_modules\\async\\dist\\async.js:918:16\n    at _parallel (node_modules\\async\\dist\\async.js:3685:5)\n    at Object.series (node_modules\\async\\dist\\async.js:4525:3)\n    at Object.assertEqualto (log.js:62:15)\n    at action.js:118:12\n    at ManagedPromise.invokeCallback_ (node_modules\\selenium-webdriver\\lib\\promise.js:1315:14)\n    at TaskQueue.execute_ (node_modules\\selenium-webdriver\\lib\\promise.js:2736:14)\n    at TaskQueue.executeNext_ (node_modules\\selenium-webdriver\\lib\\promise.js:2719:21)\n    at asyncRun (node_modules\\selenium-webdriver\\lib\\promise.js:2595:27)\n    at node_modules\\selenium-webdriver\\lib\\promise.js:639:7\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)\nFrom: Task: <anonymous>\n    at pollCondition (node_modules\\selenium-webdriver\\lib\\promise.js:2178:16)\n    at node_modules\\selenium-webdriver\\lib\\promise.js:2174:9\n    at new ManagedPromise (node_modules\\selenium-webdriver\\lib\\promise.js:1029:7)\n    at node_modules\\selenium-webdriver\\lib\\promise.js:2173:14\n    at TaskQueue.execute_ (node_modules\\selenium-webdriver\\lib\\promise.js:2736:14)\n    at TaskQueue.executeNext_ (node_modules\\selenium-webdriver\\lib\\promise.js:2719:21)\n    at asyncRun (node_modules\\selenium-webdriver\\lib\\promise.js:2595:27)\n    at node_modules\\selenium-webdriver\\lib\\promise.js:639:7\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)\nFrom: Task: <anonymous wait>\n    at ControlFlow.wait (node_modules\\selenium-webdriver\\lib\\promise.js:2171:17)\n    at mixin.wait (node_modules\\selenium-webdriver\\lib\\webdriver.js:749:29)\n    at Object.calculateBalance (action.js:104:10)\n    at framework\\budgetApp.js:169:12\n    at node_modules\\async\\dist\\async.js:3686:9\n    at replenish (node_modules\\async\\dist\\async.js:882:17)\n    at node_modules\\async\\dist\\async.js:886:9\n    at eachOfLimit (node_modules\\async\\dist\\async.js:913:22)\n    at node_modules\\async\\dist\\async.js:918:16\n    at _parallel (node_modules\\async\\dist\\async.js:3685:5)\n    at Object.series (node_modules\\async\\dist\\async.js:4525:3)\n    at Object.calculateBalance (framework\\budgetApp.js:167:9)\n    at Context.<anonymous> (test\\budgetApp\\sanityTests.js:30:19)\n    at node_modules\\selenium-webdriver\\testing\\index.js:153:19\n    at new ManagedPromise (node_modules\\selenium-webdriver\\lib\\promise.js:1029:7)\n    at controlFlowExecute (node_modules\\selenium-webdriver\\testing\\index.js:138:14)\n    at TaskQueue.execute_ (node_modules\\selenium-webdriver\\lib\\promise.js:2736:14)\n    at TaskQueue.executeNext_ (node_modules\\selenium-webdriver\\lib\\promise.js:2719:21)\n    at asyncRun (node_modules\\selenium-webdriver\\lib\\promise.js:2642:25)\n    at node_modules\\selenium-webdriver\\lib\\promise.js:639:7\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)\nFrom: Task: budgetApp Sanity Suite Compute_Working_Balance\n    at Context.ret (node_modules\\selenium-webdriver\\testing\\index.js:137:10)\n    at node_modules\\selenium-webdriver\\testing\\index.js:80:5\n    at ManagedPromise.invokeCallback_ (node_modules\\selenium-webdriver\\lib\\promise.js:1315:14)\n    at TaskQueue.execute_ (node_modules\\selenium-webdriver\\lib\\promise.js:2736:14)\n    at TaskQueue.executeNext_ (node_modules\\selenium-webdriver\\lib\\promise.js:2719:21)\n    at asyncRun (node_modules\\selenium-webdriver\\lib\\promise.js:2595:27)\n    at node_modules\\selenium-webdriver\\lib\\promise.js:639:7\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)"
+            },
+            "isRoot": false,
+            "uuid": "60c161f9-7a62-40a1-8fde-c22e2293a222",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "2d0935b6-5241-41e8-a9d7-3db5836c3cfc",
+          "a2cd857c-aae0-49b2-b50a-91efd9dc5cb5"
+        ],
+        "failures": [
+          "60c161f9-7a62-40a1-8fde-c22e2293a222"
+        ],
+        "pending": [],
+        "skipped": [],
+        "duration": 52441,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 9000000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 9000000
+  },
+  "copyrightYear": 2018
+}
